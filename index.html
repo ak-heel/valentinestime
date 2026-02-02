@@ -134,42 +134,78 @@
 
   <main class="card">
     <!-- ANIMAL WITH HEART -->
-    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="fur" x1="0" x2="1">
-          <stop offset="0" stop-color="#f7c7a1"/>
-          <stop offset="1" stop-color="#f2a97b"/>
-        </linearGradient>
-        <linearGradient id="heart" x1="0" x2="1">
-          <stop offset="0" stop-color="#ff4d7d"/>
-          <stop offset="1" stop-color="#ff1f68"/>
-        </linearGradient>
-      </defs>
+    <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
 
-      <path d="M250 50 C250 33 270 25 282 38
-               C294 25 314 33 314 50
-               C314 78 282 92 282 106
-               C282 92 250 78 250 50Z"
-            fill="url(#heart)"/>
+  <defs>
+    <!-- Ginger fur gradient -->
+    <radialGradient id="fur" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffd39a"/>
+      <stop offset="60%" stop-color="#ffae42"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </radialGradient>
 
-      <path d="M90 120 C90 70 140 40 190 60
-               C240 40 290 70 290 120
-               C290 180 240 210 190 210
-               C140 210 90 180 90 120Z"
-            fill="url(#fur)"/>
+    <!-- Inner ear -->
+    <radialGradient id="earInner" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffb3b3"/>
+      <stop offset="100%" stop-color="#ff8a8a"/>
+    </radialGradient>
 
-      <path d="M110 92 L95 55 L140 78 Z" fill="#f2a97b"/>
-      <path d="M270 92 L285 55 L240 78 Z" fill="#f2a97b"/>
+    <!-- Red heart -->
+    <radialGradient id="heart" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c40000"/>
+    </radialGradient>
+  </defs>
 
-      <circle cx="160" cy="130" r="8"/>
-      <circle cx="220" cy="130" r="8"/>
+  <!-- Ears -->
+  <polygon points="90,70 60,20 120,40" fill="url(#fur)" />
+  <polygon points="230,70 260,20 200,40" fill="url(#fur)" />
 
-      <path d="M190 144 C186 144 182 148 182 152
-               C182 160 190 164 190 170
-               C190 164 198 160 198 152
-               C198 148 194 144 190 144Z"
-            fill="#ff7aa2"/>
-    </svg>
+  <polygon points="95,70 70,30 115,45" fill="url(#earInner)" />
+  <polygon points="225,70 250,30 205,45" fill="url(#earInner)" />
+
+  <!-- Head -->
+  <ellipse cx="160" cy="105" rx="65" ry="60" fill="url(#fur)" />
+
+  <!-- Eyes -->
+  <ellipse cx="140" cy="105" rx="9" ry="12" fill="#2b1b0e"/>
+  <ellipse cx="180" cy="105" rx="9" ry="12" fill="#2b1b0e"/>
+  <circle cx="143" cy="100" r="3" fill="#ffffff"/>
+  <circle cx="183" cy="100" r="3" fill="#ffffff"/>
+
+  <!-- Nose -->
+  <path d="M155 125 Q160 130 165 125 Z" fill="#cc6666"/>
+
+  <!-- Mouth -->
+  <path d="M160 130 Q150 138 145 135" stroke="#663300" stroke-width="1.5" fill="none"/>
+  <path d="M160 130 Q170 138 175 135" stroke="#663300" stroke-width="1.5" fill="none"/>
+
+  <!-- Whiskers -->
+  <line x1="95" y1="125" x2="135" y2="120" stroke="#704214" stroke-width="1"/>
+  <line x1="95" y1="132" x2="135" y2="132" stroke="#704214" stroke-width="1"/>
+  <line x1="95" y1="139" x2="135" y2="144" stroke="#704214" stroke-width="1"/>
+
+  <line x1="185" y1="120" x2="225" y2="125" stroke="#704214" stroke-width="1"/>
+  <line x1="185" y1="132" x2="225" y2="132" stroke="#704214" stroke-width="1"/>
+  <line x1="185" y1="144" x2="225" y2="139" stroke="#704214" stroke-width="1"/>
+
+  <!-- Body -->
+  <ellipse cx="160" cy="200" rx="70" ry="50" fill="url(#fur)" />
+
+  <!-- Heart -->
+  <path
+    d="
+      M160 180
+      C160 155 120 155 120 185
+      C120 215 160 235 160 235
+      C160 235 200 215 200 185
+      C200 155 160 155 160 180
+    "
+    fill="url(#heart)"
+  />
+
+</svg>
+
 
     <h1>Sruthy will you be my valentine?</h1>
 
@@ -300,6 +336,7 @@
   </script>
 </body>
 </html>
+
 
 
 
